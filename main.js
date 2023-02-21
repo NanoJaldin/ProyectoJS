@@ -48,7 +48,7 @@ let numero1 = parseInt(prompt("Ingrese el primer numero"));
 let operacion = prompt("Ingrese la operacion (+ , - , * , / )");
 let numero2 = parseInt(prompt("Ingrese el segundo numero"));
 
-let resultado = "El resultado es " + calculadora(numero1, numero2, operacion);
-// let mensaje = `El resultado es ${resultado}`;
+let resultado = calculadora(numero1, numero2, operacion);
+let mensaje = `El resultado es ${resultado}`;
 
-alert(resultado);
+alert(mensaje);
