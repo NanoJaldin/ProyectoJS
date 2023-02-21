@@ -12,11 +12,43 @@
 //   alert(`El numero ${salidaNumero} es impar`);
 // }
 
-let numero = parseInt(prompt(`Ingrese un numero`));
+// let numero = parseInt(prompt(`Ingrese un numero`));
 
-while (numero != "ESC") {
-  for (i = 1; i <= numero; i++) {
-    alert("Hola " + i);
+// while (numero != "ESC") {
+//   for (i = 1; i <= numero; i++) {
+//     alert("Hola " + i);
+//   }
+//   numero = parseInt(prompt(`Ingrese un numero`));
+// }
+
+function calculadora(num1, num2, operacion) {
+  switch (operacion) {
+    case "+":
+      return num1 + num2;
+      break;
+
+    case "-":
+      return num1 - num2;
+      break;
+
+    case "*":
+      return num1 * num2;
+      break;
+
+    case "/":
+      return num1 / num2;
+      break;
+
+    default:
+      return "Syntax Error";
   }
-  numero = parseInt(prompt(`Ingrese un numero`));
 }
+
+let numero1 = parseInt(prompt("Ingrese el primer numero"));
+let operacion = prompt("Ingrese la operacion (+ , - , * , / )");
+let numero2 = parseInt(prompt("Ingrese el segundo numero"));
+
+let resultado = "El resultado es " + calculadora(numero1, numero2, operacion);
+// let mensaje = `El resultado es ${resultado}`;
+
+alert(resultado);
